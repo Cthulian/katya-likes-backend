@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "things",
+  "info": {
+    "singularName": "thing",
+    "pluralName": "things",
+    "displayName": "Thing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "interest": {
+      "type": "enumeration",
+      "enum": [
+        "Like",
+        "Don't Like"
+      ],
+      "required": true
+    },
+    "thingImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    }
+  }
+}
